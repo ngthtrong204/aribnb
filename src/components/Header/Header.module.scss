@@ -1,0 +1,55 @@
+.myNavbar {
+   .logo {
+      width: 120px;
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+   }
+   .searchBox {
+      .submit {
+         height: 36px;
+         color: rgb(65, 65, 65);
+         border: 1px solid rgb(133, 133, 133);
+         &:hover{
+            background-color:  #e5e5ea;
+         }
+      }
+      .datePicker,
+      .locationPicker {
+         overflow: hidden;
+         border: 1px solid rgb(133, 133, 133);
+         input {
+            background-color: white;
+            &:focus {
+               background-color: #e5e5ea;
+            }
+         }
+         span {
+            color: rgb(65, 65, 65);
+         }
+      }
+   }
+   .accountBox {
+      width: 150px;
+      .button {
+         width: 82px;
+         .accountButton {
+            display: flex;
+            align-items: center;
+            padding: 0;
+            border: 1px solid rgb(133, 133, 133);
+            &:hover{
+               background-color: #e5e5ea;
+            }
+            overflow: hidden;
+            .imgBox {
+               width: 40px;
+               img {
+                  border-radius: 50%;
+                  width: 100%;
+               }
+            }
+         }
+      }
+   }
+}
