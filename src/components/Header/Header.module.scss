@@ -10,8 +10,8 @@
          height: 36px;
          color: rgb(65, 65, 65);
          border: 1px solid rgb(133, 133, 133);
-         &:hover{
-            background-color:  #e5e5ea;
+         &:hover {
+            background-color: #e5e5ea;
          }
       }
       .datePicker,
@@ -38,15 +38,19 @@
             align-items: center;
             padding: 0;
             border: 1px solid rgb(133, 133, 133);
-            &:hover{
+            &:hover {
                background-color: #e5e5ea;
             }
             overflow: hidden;
             .imgBox {
                width: 40px;
+               height: 40px;
+               padding: 2px;
                img {
                   border-radius: 50%;
                   width: 100%;
+                  height: 100%;
+                  object-fit: cover;
                }
             }
          }

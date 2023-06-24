@@ -1,0 +1,12 @@
+.img{
+   width: 40%;
+   // height: 500px;
+   margin: auto;
+   img{
+      display: block;
+      height: 250px;
+      width: 250px;
+      object-fit:  cover;
+      border-radius: 50% ;
+   }
+}

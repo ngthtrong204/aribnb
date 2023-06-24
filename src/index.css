@@ -20,3 +20,15 @@ code {
 .dropdown-menu {
   position: absolute;
 }
+.swiper-button-next::after,
+.swiper-button-prev::after{
+  color: #ff5a5f;
+}
+.swiper-slide.swiper-slide-thumb-active.swiper-slide-visible {
+  .RoomDetail_imgThumb__25aWb{
+    opacity: 1;
+  }
+}
+.rs-stack-item{
+  text-align: center;
+}

@@ -3,7 +3,7 @@ import style from './Footer.module.scss'
 function Footer() {
    return (
       <div className="bg-body-tertiary">
-         <div className='container  my-5 py-5' >
+         <div className='container  mt-5 py-5' >
             <div className={`${style.main} row `}>
                <div className={`${style.section} col-sm-12 col-md-6 col-lg-3`}>
                   <h5>Hỗ trợ</h5>
