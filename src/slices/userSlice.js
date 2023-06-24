@@ -20,8 +20,9 @@ export const signin = createAsyncThunk("user/signin", async (values) => {
       throw error.response?.data?.content
    }
 })
-export const getUser = createAsyncThunk("user/get", async (id) => {
+export const getUser = createAsyncThunk("user/getUser", async (id) => {
    try {
+      // console.log("getUser run");
       const data = await apiGetUserById(id)
       localStorage.setItem("user", JSON.stringify(data.content))
       return data?.content
@@ -66,6 +67,7 @@ const userSlice = createSlice({
          .addCase(signin.rejected, (state, action) => {
             return { ...state, isLoading: false, error: action.error.message }
          });
+          // case for get user
       build.addCase(getUser.pending, (state) => {
          return { ...state, isLoading: true, error: null }
       })

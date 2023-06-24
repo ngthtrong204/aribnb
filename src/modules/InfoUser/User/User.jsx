@@ -5,14 +5,12 @@ import { apiUploadAvatar } from '../../../api/userAPI'
 import { getUser } from '../../../slices/userSlice'
 import { useParams } from 'react-router-dom'
 function User() {
-   const [title, setTitle] = useState(null)
    const dispatch = useDispatch()
+   const [title, setTitle] = useState(null)
    const { userId } = useParams()
    const [fileAvt, setFileAvt] = useState(null)
-   const { user } = useSelector((state) => state.user)
-   console.log(user);
+   const { user, isLoading, error } = useSelector((state) => state.user)
    const handleSelectFile = (event) => {
-      event.preventDefault()
       const file = event.target.files[0]
       setFileAvt(file)
    }
@@ -20,9 +18,12 @@ function User() {
       try {
          const data = await apiUploadAvatar(fileAvt)
          dispatch(getUser(userId))
-      } catch (error) {
-         console.log(error);
+
+      } catch (er) {
+         console.log(er);
       }
+
+      console.log(error);
    }
    const handleShowModal = (title) => {
       switch (title) {
@@ -45,11 +46,6 @@ function User() {
             break;
       }
    }
-
-
-
-
-
    if (!user) {
       return
    }
@@ -168,7 +164,7 @@ function User() {
                      </div>
                      <div className="modal-footer">
                         <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button  type="button" className="btn btn-primary">update</button>
+                        <button type="button" className="btn btn-primary">update</button>
                      </div>
                   </div>
                </div>
