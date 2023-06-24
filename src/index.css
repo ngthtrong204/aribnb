@@ -23,9 +23,9 @@ code {
 .swiper-button-next::after,
 .swiper-button-prev::after{
   color: #ff5a5f;
-}
+} 
 .swiper-slide.swiper-slide-thumb-active.swiper-slide-visible {
-  img.RoomDetail_imgThumb__BYZpl{  
+  .RoomDetail_imgThumb__BYZpl{  
     opacity: 1;
   }
 }
